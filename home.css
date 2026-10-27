@@ -139,3 +139,36 @@ h1 {
     transform: translateY(-600px) rotate(-10deg);
     opacity: 0;
   }
+}
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    padding: 24px 0;
+    box-sizing: border-box;
+  }
+
+  .card {
+    width: calc(100% - 32px);
+    max-width: 780px;
+    padding: clamp(20px, 5vw, 40px);
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .message,
+  .from {
+    font-size: clamp(1.05rem, 3.8vw, 1.6875rem);
+    line-height: 1.4;
+  }
+}
