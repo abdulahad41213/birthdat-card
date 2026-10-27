@@ -145,6 +145,7 @@ h1 {
   body {
     height: auto;
     min-height: 100vh;
+    min-height: 100svh;
     padding: 24px 0;
     box-sizing: border-box;
   }
@@ -170,5 +171,30 @@ h1 {
   .from {
     font-size: clamp(1.05rem, 3.8vw, 1.6875rem);
     line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px 0;
+  }
+
+  .card {
+    width: calc(100% - 24px);
+    padding: clamp(16px, 5vw, 22px);
+  }
+
+  h1 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .image-container img {
+    width: min(150px, 100%);
+  }
+
+  .message,
+  .from {
+    font-size: clamp(1rem, 3.8vw, 1.25rem);
+    overflow-wrap: anywhere;
   }
 }
